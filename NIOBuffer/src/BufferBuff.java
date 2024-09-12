@@ -28,6 +28,7 @@ public class BufferBuff {
 			try (FileChannel fileChannelToNoteBook = FileChannel.open(path)){
 				fileChannelToNoteBook.read(thoughtsBytesBuffer);
 				byte[] thoughtsBytesArray = thoughtsBytesBuffer.array();
+				//trim() because the read string might be less than 512.
 				String thoughtsString = new String(thoughtsBytesArray).trim();
 				System.out.println(thoughtsString);
 			} catch (IOException e) {
