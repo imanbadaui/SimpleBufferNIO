@@ -13,7 +13,7 @@ public class BufferBuff {
 	}
 
 	public static void write(Path path) {
-		String thoughts = "I think I'm fucking awsome!\n";
+		String thoughts = "I think I'm fucking awesome!\n";
 		byte[] thoughtsBytesArray = thoughts.getBytes();
 		ByteBuffer thoughtsBytesBuffer = ByteBuffer.wrap(thoughtsBytesArray);
 		try (FileChannel fileChannelToNoteBook = FileChannel.open(path, StandardOpenOption.CREATE, StandardOpenOption.APPEND)){
